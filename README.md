@@ -17,7 +17,9 @@ To develop skills in detecting, analyzing, and responding to endpoint threats by
 
 ### Tools Used
 
-- 
+- Sysmon
+- Cron Jobs
+- LimaCharlie
 
 
 ## Steps
