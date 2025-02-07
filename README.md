@@ -35,3 +35,9 @@ To develop skills in detecting, analyzing, and responding to endpoint threats by
 
 *Ref 1.5![Screenshot 2025-01-31 171252](https://github.com/user-attachments/assets/1b732888-7d3b-4299-81ff-cadfb821d377)
 
+2. Now that my target VM is infected with malware the EDR process can begin. So my first step is to utilize some of the built in Windows tools to begin my investigation, I open powershell in adminstrator mode and run the tasklist command to view running processes on my VM. I then located the downloaded file that contained the malware which in this case is "notmalware.exe" and took note of the process ID number (PID) and the parent process ID number. Followed by running the same command with the /M argument to return the dynamic link libraries (DLL) associated with the malware file and documented them. 
+
+*Ref 2.1: ![Screenshot 2025-02-07 115628](https://github.com/user-attachments/assets/97c87243-5b0f-44aa-9cf9-4345ab02cd62)
+*Ref 2.2: ![Screenshot 2025-02-07 120504](https://github.com/user-attachments/assets/715c3071-12dc-4f6e-95c8-b5b2c3474220)
+*Ref 2.3: ![Screenshot 2025-02-07 121439](https://github.com/user-attachments/assets/4608f967-6d20-4c0b-ba25-574116acac02)
+
