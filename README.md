@@ -22,6 +22,7 @@ To develop skills in detecting, analyzing, and responding to endpoint threats by
 - LimaCharlie
 - Metasploit
 - Kali linux
+- Powershell
 
 
 ## Steps
@@ -35,9 +36,16 @@ To develop skills in detecting, analyzing, and responding to endpoint threats by
 
 *Ref 1.5![Screenshot 2025-01-31 171252](https://github.com/user-attachments/assets/1b732888-7d3b-4299-81ff-cadfb821d377)
 
-2. Now that my target VM is infected with malware the EDR process can begin. So my first step is to utilize some of the built in Windows tools to begin my investigation, I open powershell in adminstrator mode and run the tasklist command to view running processes on my VM. I then located the downloaded file that contained the malware which in this case is "notmalware.exe" and took note of the process ID number (PID) and the parent process ID number. Followed by running the same command with the /M argument to return the dynamic link libraries (DLL) associated with the malware file and documented them. 
+2. Now for me to establish persistance on my target VM I will Create a backdoor by adding a key to the Windows registry. First utilizing my reverse tcp connection and the shell command I ran the commands in Ref 2.1 creating a new key named NotABackDoor that will run on startup of my target VM giving me persistant access. I then went to the registry editor on my target VM to confirm the creation of my registry entry.   
 
-*Ref 2.1: ![Screenshot 2025-02-07 115628](https://github.com/user-attachments/assets/97c87243-5b0f-44aa-9cf9-4345ab02cd62)
-*Ref 2.2: ![Screenshot 2025-02-07 120504](https://github.com/user-attachments/assets/715c3071-12dc-4f6e-95c8-b5b2c3474220)
-*Ref 2.3: ![Screenshot 2025-02-07 121439](https://github.com/user-attachments/assets/4608f967-6d20-4c0b-ba25-574116acac02)
+*Ref 2.1:![Screenshot 2025-02-08 102310](https://github.com/user-attachments/assets/03eb6f55-bc86-4645-9fa9-4b50505a8b82)
+*Ref 2.2:![Screenshot 2025-02-08 103626](https://github.com/user-attachments/assets/a3dfb3b3-0068-48fe-96ab-850e48dc999d)
+
+3. Now that my target VM is infected with malware the EDR process can begin. So my first step is to utilize some of the built in Windows tools to begin my investigation, I open powershell in adminstrator mode and run the tasklist command to view running processes on my VM. I then located the downloaded file that contained the malware which in this case is "notmalware.exe" and took note of the process ID number (PID) and the parent process ID number. Followed by running the same command with the /M argument to return the dynamic link libraries (DLL) associated with the malware file and documented them and proceeded to delete the file. The next step is to investigate the Windows registry to see if the attacker added any entries to the registry to establish persistance. In this case I noted that a new entry had been created named NotABackDoor I took note of this and proceeded to remove the entry from the registry to remove the attackers back door into the system.  
+
+*Ref 3.1: ![Screenshot 2025-02-07 115628](https://github.com/user-attachments/assets/97c87243-5b0f-44aa-9cf9-4345ab02cd62)
+*Ref 3.2: ![Screenshot 2025-02-07 120504](https://github.com/user-attachments/assets/715c3071-12dc-4f6e-95c8-b5b2c3474220)
+*Ref 3.3: ![Screenshot 2025-02-07 121439](https://github.com/user-attachments/assets/4608f967-6d20-4c0b-ba25-574116acac02)
+*Ref 3.4: ![Screenshot 2025-02-08 102604](https://github.com/user-attachments/assets/dd9df999-da7e-4253-b10d-a76019473a71)
+*Ref 3.5: ![Screenshot 2025-02-08 111332](https://github.com/user-attachments/assets/0bff2f6d-cf1a-4ef1-873a-9a78fe3afa00)
 
