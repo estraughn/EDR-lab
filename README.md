@@ -71,3 +71,13 @@ To develop skills in detecting, analyzing, and responding to endpoint threats by
 *Ref 3.7: ![Screenshot 2025-02-10 120122](https://github.com/user-attachments/assets/b46ded68-2cae-463c-b549-6cdb2bd1212e)
 
 *Ref 3.8: ![Screenshot 2025-02-10 121513](https://github.com/user-attachments/assets/995c0738-ca11-46b4-b58e-efb31dd7ae32)
+
+4. After the EDR process has completed here are some proactive steps that can be taken for improve the organizations security posture:
+
+- Refine EDR policies (e.g., tuning detection rules, improving behavioral analytics)
+- Strengthen allowlists/denylists to prevent execution of unauthorized applications
+- Adjust firewall, IDS/IPS, and SIEM rules based on EDR findings
+- Conduct proactive threat hunting using TTPs (Tactics, Techniques, and Procedures) observed in the EDR logs
+- Enforce application control (e.g., Windows Defender Application Control, AppLocker) to restrict unknown executables
+- Conduct employee security training based on findings
+- Schedule regular endpoint security assessments to identify potential gaps
